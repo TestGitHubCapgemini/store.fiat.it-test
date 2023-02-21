@@ -8,7 +8,7 @@ function myFunction() {
     let message = "Este es el nombre " +nameVal + " " +  lastNameVal;
     
     let lexOrigin;  
-    window.addEventListener("message", handleMessage() , false);
+    window.addEventListener("message", handleMessage , false);
     
     alert("The form was submitted " + nameVal + " " + lastNameVal);
             window.parent.postMessage(message, lexOrigin);
