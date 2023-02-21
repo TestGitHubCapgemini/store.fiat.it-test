@@ -20,8 +20,8 @@ function myFunction() {
   }*/
 
   function handleMessage(evt){
-            console.log('Origin '+ event.origin);
-            console.log('data '+ event.data);
-            lexOrigin =  event.data;
+            console.log('Origin '+ evt.origin);
+            console.log('data '+ evt.data);
+            lexOrigin =  evt.data;
 
   }
