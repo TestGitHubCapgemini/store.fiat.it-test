@@ -1,5 +1,5 @@
 let lexOrigin;  
-window.addEventListener("message", handleMessage(event), false);
+window.addEventListener("message", handleMessage(window.event), false);
 
 
 function myFunction() {
