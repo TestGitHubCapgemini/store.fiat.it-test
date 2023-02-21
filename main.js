@@ -1,11 +1,5 @@
 let lexOrigin;  
-window.onload = window.addEventListener("message", function(event) {
-            console.log('Origin '+ event.origin);
-            console.log('data '+ event.data);
-            lexOrigin =  event.data;
-
-        });
-    
+window.addEventListener("message", handleMessage(event), false);
 
 
 function myFunction() {
@@ -26,5 +20,8 @@ function myFunction() {
   }*/
 
   function handleMessage(evt){
+            console.log('Origin '+ event.origin);
+            console.log('data '+ event.data);
+            lexOrigin =  event.data;
 
   }
