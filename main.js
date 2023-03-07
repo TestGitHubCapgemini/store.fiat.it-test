@@ -19,6 +19,6 @@ function createEvent(){
   function handleMessage(){
             console.log('Origin '+ event.origin);
             console.log('data '+ event.data);
-            lexOrigin =  event.data;
+      document.getElementById("demo").innerHTML = event.data.campo1;
 
   }
