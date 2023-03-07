@@ -26,7 +26,7 @@ function createEvent(){
      window.addEventListener("message", handleMessage , false);
 }
 
-  function handleMessage(event){
+  function handleMessage(){
             console.log('Origin '+ event.origin);
             console.log('data '+ event.data);
             lexOrigin =  event.data;
