@@ -8,7 +8,7 @@ function myFunction() {
     let message = "Este es el nombre " +nameVal + " " +  lastNameVal;
     
     let lexOrigin;  
-    window.addEventListener("message", handleMessage , false);
+   
     
     alert("The form was submitted " + nameVal + " " + lastNameVal);
             window.parent.postMessage(message, lexOrigin);
@@ -20,6 +20,11 @@ function myFunction() {
   } else {
     window.attachEvent("onmessage", handleMessage);
   }*/
+
+function createEvent(){
+    console.log("Entra en onload del frame");
+     window.addEventListener("message", handleMessage , false);
+}
 
   function handleMessage(event){
             console.log('Origin '+ event.origin);
