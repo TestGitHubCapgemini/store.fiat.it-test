@@ -7,8 +7,7 @@ function myFunction() {
     let lastNameVal = document.getElementById("lname").value;
     let message = "Este es el nombre " +nameVal + " " +  lastNameVal; 
     
-    alert("The form was submitted " +message);
-            window.parent.postMessage(message, lexOrigin);
+    window.parent.postMessage(message, lexOrigin);
   }
 
 function createEvent(){
