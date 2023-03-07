@@ -7,7 +7,7 @@ function myFunction() {
     let lastNameVal = document.getElementById("lname").value;
     let message = "Este es el nombre " +nameVal + " " +  lastNameVal;
     
-    let lexOrigin;  
+    let lexOrigin = "https://github.com/CabraGrande/FormularioTest/edit/main/main.js";  
    
     
     alert("The form was submitted " + nameVal + " " + lastNameVal);
