@@ -19,6 +19,8 @@ function createEvent(){
   function handleMessage(){
             console.log('Origin '+ event.origin);
             console.log('data '+ event.data);
+      console.log(event.data.campo1);
+      console.log(event.data.campo2);
       if(event.data.campo2 ==  "incio"){
       document.getElementById("titulo").innerHTML = event.data.campo1;
       } else if(event.data.campo2 ==  "campoInput"){
