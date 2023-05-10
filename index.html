@@ -13,8 +13,7 @@
 		outline: 1px solid #005290;
 	}
 </style>
-<button onclick="primeraPagina()">Live Chat MARKETINGB CAP</button>
-<button onclick="myFunction()">Chatbot Test</button>	
+
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -57,22 +56,15 @@
 	};
 
 	if (!window.embedded_svc) {
-		
-primeraPagina();
-
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://psa-customerfirst--marketingb.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
 	} else {
-		primeraPagina();
-
+		initESW('https://service.force.com');
 	}
-	
-			function primeraPagina() {
-			var s = document.createElement('script');
-			s.setAttribute('src', 'https://psa-customerfirst--marketingb.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-			s.onload = function() {
-				initESW(null);
-			};
-			document.body.appendChild(s);
-			}
 </script>
 </body>
 </html>
