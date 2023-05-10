@@ -5,13 +5,89 @@
 </head>
 <body>
 <style type='text/css'>
+        @import url('https://psa-customerfirst--marketingb.sandbox.my.site.com/opel/resource/1673468055000/SnY_slds_mod_min_css/slds.min.css');
+        .embeddedServiceHelpButton .helpButton .uiButton {
+          background-color: #005290;
+          font-family: "Arial", sans-serif;
+        }
+
+        .embeddedServiceHelpButton .helpButton .uiButton {
+          /* background-color: #5820D5 !important;  */
+          font-family: "Salesforce Sans", sans-serif !important;
+        }
+
+        .embeddedServiceHelpButton .helpButton .uiButton:focus {
+         /* outline: 1px solid #5820D5 !important; */
+        }
+	      
+	      
+         @media only screen and (min-width: 48em) {
+	   .embeddedServiceHelpButton .helpButton .uiButton:hover::before,
+		 .embeddedServiceHelpButton .helpButton .uiButton:focus::before
+		 {
+		border-radius: 50% !important; 
+	     }
+	 }
+  
+
+        @font-face {
+          font-family: 'Salesforce Sans' !important;
+          src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+            url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype') !important;
+        }
+
+        span.message{
+          display:none;
+        }
+
+        button.sidebarHeader.minimizedContainer.embeddedServiceSidebarMinimizedDefaultUI {
+          background-image: url('https://psa-customerfirst--c.eu43.visual.force.com/resource/1681322216000/RedBotAvatar');
+	  border-radius: 50% !important;
+          background-color: white !important;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: right top -15px;
+          background-origin: border-box;
+        }
+
+        .embeddedServiceHelpButton .helpButton .uiButton{
+	   background-image: url('https://psa-customerfirst--c.eu43.visual.force.com/resource/1681322216000/RedBotAvatar') !important;
+	   background-position: center;
+	   background-color: #da2919 !important;
+	   background-size: 50px;
+	   background-repeat: no-repeat !important;
+	   height: 80px !important;
+	   width: 80px !important;
+	   border-radius: 50% !important;
+	   min-height: 60px !important;
+	   min-width: 60px !important; 
+
+        }
+
+        @keyframes pulse-blue {
+          0%   {transform: scale(0.95);box-shadow: 0 0 0 0 var(--lwc-colorBackgroundButtonBrand,rgb(0, 163, 224));}
+          70%  {transform: scale(1.0);box-shadow: 0 0 0 20px rgb(0 126 219 / 0%);}
+          100% {transform: scale(0.95);box-shadow: 0 0 0 0 rgb(0 126 219 / 0%);}
+        }
+
+        .embeddedServiceHelpButton .embeddedServiceIcon{
+          visibility : hidden;
+        }
+
+        .embeddedServiceHelpButton .helpButton{
+         /* height : 90px; */
+	    margin-right: 20px;
+	    margin-bottom: 60px;
+        }
+
+        h2[embeddedService-chatHeader_chatHeader] {
+          font-size : 13px !important;
+        }
+
 	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
+            box-shadow: none !important;
 	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
+      <
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
