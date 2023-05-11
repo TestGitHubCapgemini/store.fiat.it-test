@@ -25,8 +25,28 @@
 
         }
 
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: none;
+    @keyframes pulse-blue {
+          0%   {transform: scale(0.95);box-shadow: 0 0 0 0 var(--lwc-colorBackgroundButtonBrand,rgb(0, 163, 224));}
+          70%  {transform: scale(1.0);box-shadow: 0 0 0 20px rgb(0 126 219 / 0%);}
+          100% {transform: scale(0.95);box-shadow: 0 0 0 0 rgb(0 126 219 / 0%);}
+        }
+
+        .embeddedServiceHelpButton .embeddedServiceIcon{
+          visibility : hidden;
+        }
+
+        .embeddedServiceHelpButton .helpButton{
+         /* height : 90px; */
+	    margin-right: 20px;
+	    margin-bottom: 60px;
+        }
+
+        h2[embeddedService-chatHeader_chatHeader] {
+          font-size : 13px !important;
+        }
+
+	.embeddedServiceHelpButton .helpButton .uiButton {
+            box-shadow: none !important;
 	}
 </style>
 	<style type='text/css'>
