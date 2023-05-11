@@ -5,7 +5,50 @@
 </head>
 <body>
 <style type='text/css'>
+      @import url('https://psa-customerfirst--marketingb.sandbox.my.site.com/opel/resource/1673468055000/SnY_slds_mod_min_css/slds.min.css');
+        .embeddedServiceHelpButton .helpButton .uiButton {
+          background-color: #005290;
+          font-family: "Arial", sans-serif;
+        }
 
+        .embeddedServiceHelpButton .helpButton .uiButton {
+          /* background-color: #5820D5 !important;  */
+          font-family: "Salesforce Sans", sans-serif !important;
+        }
+
+        .embeddedServiceHelpButton .helpButton .uiButton:focus {
+         /* outline: 1px solid #5820D5 !important; */
+        }
+	      
+	      
+         @media only screen and (min-width: 48em) {
+	   .embeddedServiceHelpButton .helpButton .uiButton:hover::before,
+		 .embeddedServiceHelpButton .helpButton .uiButton:focus::before
+		 {
+		border-radius: 50% !important; 
+	     }
+	 }
+  
+
+        @font-face {
+          font-family: 'Salesforce Sans' !important;
+          src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
+            url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype') !important;
+        }
+
+        span.message{
+          display:none;
+        }
+
+        button.sidebarHeader.minimizedContainer.embeddedServiceSidebarMinimizedDefaultUI {
+          background-image: url('https://psa-customerfirst--c.eu43.visual.force.com/resource/1681322216000/RedBotAvatar');
+	  border-radius: 50% !important;
+          background-color: white !important;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: right top -15px;
+          background-origin: border-box;
+        }
         .embeddedServiceHelpButton .helpButton .uiButton{
 	   background-image: url('https://psa-customerfirst--marketingb--c.sandbox.vf.force.com/resource/1683719484000/ChatBubble?') !important;
 	   background-position: center;
@@ -44,6 +87,16 @@
             box-shadow: none !important;
 	}
       <
+</style>
+	<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		 outline: 1px solid #005290; 
+		
+	}
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
