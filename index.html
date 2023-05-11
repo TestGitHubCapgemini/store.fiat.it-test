@@ -5,6 +5,12 @@
 </head>
 <body>
 <style type='text/css'>
+	
+	 span.message{
+          display:none;
+        }
+
+	
     	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: transparent;
 		border: none;
@@ -49,7 +55,18 @@
             box-shadow: none !important;
 	}
 </style>
-
+	
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		 outline: 1px solid #005290; 
+		
+	}
+</style>
+	
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
