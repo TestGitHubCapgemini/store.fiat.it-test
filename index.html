@@ -11,12 +11,19 @@
 		padding: 0;
 	}
 
-	.embeddedServiceHelpButton .helpButton .uiButton::before {
-		content: url('https://psa-customerfirst--c.eu43.visual.force.com/resource/1681322216000/RedBotAvatar');
-		display: block;
-		width: 32px; /* Ajusta el ancho de la imagen según tus necesidades */
-		height: 32px; /* Ajusta la altura de la imagen según tus necesidades */
-	}
+        .embeddedServiceHelpButton .helpButton .uiButton{
+	   background-image: url('https://psa-customerfirst--c.eu43.visual.force.com/resource/1681322216000/RedBotAvatar') !important;
+	   background-position: center;
+	   background-color: #da2919 !important;
+	   background-size: 50px;
+	   background-repeat: no-repeat !important;
+	   height: 80px !important;
+	   width: 80px !important;
+	   border-radius: 50% !important;
+	   min-height: 60px !important;
+	   min-width: 60px !important; 
+
+        }
 
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
 		outline: none;
