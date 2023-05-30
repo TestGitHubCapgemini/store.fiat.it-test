@@ -72,13 +72,23 @@ button.dialogButton.dialog-button-0.uiButton.embeddedServiceSidebarButton{
 		</style>
 <script type='text/javascript' src='https://service.force.com/embeddedservice/menu/fab.min.js'></script>
 <script type='text/javascript'>
-var initESW = function(a) {
-        embedded_svc.menu.settings.language = "es";
-        embedded_svc.menu.init("https://psa-customerfirst.my.salesforce.com", "https://d.la3-c1-fra.salesforceliveagent.com/chat", a, "00D0O000000YvX4", "ES_Citroen_SOL")
-    },
+	var initESW = function(gslbBaseURL) {
+		// Required if you want labels in a language that’s different from your user’s context.
+		embedded_svc.menu.settings.language = 'fr'; //For example, enter 'en' or 'en-US'
+
+		embedded_svc.menu.init(
+			'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com',
+			'https://d.la1-c1cs-cdg.salesforceliveagent.com/chat',
+			gslbBaseURL,
+			'00D0D0000000P9N',
+			'FR_Opel_PCDO'
+		);
+	};
+	
     details = navigator.userAgent,
     regexp = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,
     isMobileDevice = regexp.test(details);
+	
 if (!isMobileDevice) {
     console.log("inside desktop");
     var style = document.createElement("style");
@@ -91,7 +101,7 @@ if (!isMobileDevice) {
 if (window.embedded_svc && window.embedded_svc.menu) initESW("https://service.force.com");
 else {
     var s = document.createElement("script");
-    s.setAttribute("src", "https://psa-customerfirst.my.salesforce.com/embeddedservice/menu/fab.min.js");
+    s.setAttribute("src", "https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js");
     s.onload = function() {
         initESW(null)
     };
