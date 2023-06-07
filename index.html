@@ -72,14 +72,14 @@ color: var(--lwc-colorBackgroundButtonBrand,rgb(235, 100, 40)) !important;
 <script type='text/javascript'>
 var initESW = function(gslbBaseURL) {
 // Required if you want labels in a language that’s different from your user’s context.
-embedded_svc.menu.settings.language = 'pt_PT'; //For example, enter 'en' or 'en-US'
+embedded_svc.menu.settings.language = 'nl_NL'; //For example, enter 'en' or 'en-US'
 
 		embedded_svc.menu.init(
-			'https://psa-customerfirst--hotfix1.sandbox.my.salesforce.com',
-			'https://d.la2-c1cs-fra.salesforceliveagent.com/chat',
+			'https://psa-customerfirst--preprod.sandbox.my.salesforce.com',
+			'https://d.la3-c1cs-fra.salesforceliveagent.com/chat',
 			gslbBaseURL,
-			'00D9E000000A6K7',
-			'PT_Citroen_PCDO'
+			'00D5t0000004fHO',
+			'NL_Peugeot_PCDO'
 		);
 };
 
@@ -101,7 +101,7 @@ document.body.appendChild(style);
 
 if (!window.embedded_svc || !window.embedded_svc.menu) {
 var s = document.createElement('script');
-		s.setAttribute('src', 'https://psa-customerfirst--hotfix1.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
+		s.setAttribute('src', 'https://psa-customerfirst--preprod.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
 s.onload = function() {
 initESW(null);
 };
