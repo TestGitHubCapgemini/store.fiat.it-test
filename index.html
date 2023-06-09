@@ -75,11 +75,11 @@ var initESW = function(gslbBaseURL) {
 embedded_svc.menu.settings.language = 'nl_NL'; //For example, enter 'en' or 'en-US'
 
 		embedded_svc.menu.init(
-			'https://psa-customerfirst.my.salesforce.com',
-			'https://d.la3-c1-cdg.salesforceliveagent.com/chat',
+			'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com',
+			'https://d.la1-c1cs-cdg.salesforceliveagent.com/chat',
 			gslbBaseURL,
-			'00D0O000000YvX4',
-			'NL_Peugeot_PCDO'
+			'00D0D0000000P9N',
+			'NL_OPEL_PCDO'
 		);
 };
 
@@ -93,7 +93,7 @@ if(isMobileDevice){}
 else{
 console.log('inside desktop');
 var style = document.createElement('style');
-style.innerHTML = '.embeddedServiceHelpButton .uiButton{ height: 80px !important;min-width: 80px !important;width:80px;border-radius: 50% !important;bottom: 40px !important;right:70px !important;background-image: url(https://psa-customerfirst--c.eu43.visual.force.com/resource/1651716398000/ChatAvatar) !important;border: 5px solid var(--lwc-colorBackgroundButtonBrand,rgb(235, 100, 40));background-repeat: no-repeat !important;background-size: 70px 70px !important;}';
+style.innerHTML = '.embeddedServiceHelpButton .uiButton{ height: 80px !important;min-width: 80px !important;width:80px;border-radius: 50% !important;bottom: 40px !important;right:70px !important;background-image: url(https://psa-customerfirst--devhotfix--c.sandbox.vf.force.com/resource/1651716398000/ChatAvatar) !important;border: 5px solid var(--lwc-colorBackgroundButtonBrand,rgb(235, 100, 40));background-repeat: no-repeat !important;background-size: 70px 70px !important;}';
 style.innerHTML += 'li#esw-cta_3mi7Y0000000014{pointer-events : none;opacity :0.4;}';
 style.innerHTML += '.embedded-service .channelmenu_ctas > li:last-child{pointer-events : none;opacity :0.4;}';
 document.body.appendChild(style);
@@ -101,7 +101,7 @@ document.body.appendChild(style);
 
 if (!window.embedded_svc || !window.embedded_svc.menu) {
 var s = document.createElement('script');
-		s.setAttribute('src', 'https://psa-customerfirst.my.salesforce.com/embeddedservice/menu/fab.min.js');
+s.setAttribute('src', 'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
 s.onload = function() {
 initESW(null);
 };
