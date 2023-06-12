@@ -49,7 +49,7 @@ padding : 1px 6px;
 color: white;
 }
 
-.embedded-service .fab {
+.embedded-service .fab div[class="icon_fab_container"]{
     background-color: transparent;
 }
 
@@ -64,7 +64,7 @@ var initESW = function(gslbBaseURL) {
 			'https://d.la3-c1-cdg.salesforceliveagent.com/chat',
 			gslbBaseURL,
 			'00D0O000000YvX4',
-			'NL_DS_PCDO'
+			'NL_OPEL_PCDO'
 		);
 
 };
@@ -79,16 +79,7 @@ if (isMobileDevice) {} else {
     console.log('inside desktop');
     var style = document.createElement('style');
     style.innerHTML = 
-	'.embeddedServiceHelpButton .uiButton {' +
-	'height: 80px !important;'+
-	'min-width: 80px !important;'+
-	'width: 80px;'+
-	'border-radius: 50% !important;'+
-	'bottom: 40px !important;'+
-	'right: 70px !important;'+
-	'border: 5px solid var(--lwc-colorBackgroundButtonBrand, rgb(235, 100, 40));'+
-	'background-repeat: no-repeat !important;'+
-	'background-size: 70px 70px !important;}';
+	'.embeddedServiceHelpButton .uiButton { height: 80px !important; min-width: 80px !important; width: 80px;}';
     style.innerHTML += 'li#esw-cta_3mi7Y0000000014{pointer-events : none;opacity :0.4;}';
     style.innerHTML += '.embedded-service .channelmenu_ctas > li:last-child{pointer-events : none;opacity :0.4;}';
     document.body.appendChild(style);
