@@ -25,10 +25,6 @@ width: 68px;
 height: 68px;
 background-size: 70px 70px;
 }
-	
-	.embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.chasitor.plaintextContent{
-		color: black;
-	}
 
 button[embeddedService-chatHeader_chatHeader]{
 margin : 0em;
@@ -36,11 +32,10 @@ position : static;
 padding : 1px 6px;
 color: white;
 }
-
+	
 button#esw-fab {
 	background-color: transparent;
 }
-
 /*h2[embeddedService-chatHeader_chatHeader]{
 color: white;
 font-size : 9px;
@@ -63,13 +58,13 @@ color: white;
 var initESW = function(gslbBaseURL) {
     // Required if you want labels in a language that’s different from your user’s context.
     embedded_svc.menu.settings.language = 'nl_NL'; //For example, enter 'en' or 'en-US'
-
+	
 		embedded_svc.menu.init(
 			'https://psa-customerfirst.my.salesforce.com',
 			'https://d.la3-c1-cdg.salesforceliveagent.com/chat',
 			gslbBaseURL,
 			'00D0O000000YvX4',
-			'NL_OP_ROCKS_e_PCDO'
+			'NL_Peugeot_PCDO'
 		);
 };
 
@@ -100,6 +95,7 @@ if (!window.embedded_svc || !window.embedded_svc.menu) {
     initESW('https://service.force.com');
 }
 </script>
+
 
 </body>
 </html>
