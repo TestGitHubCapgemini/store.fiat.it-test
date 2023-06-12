@@ -49,29 +49,19 @@ padding : 1px 6px;
 color: white;
 }
 
-.embeddedServiceHelpButton .uiButton {
-background-image: url('https://psa-customerfirst--c.visualforce.com/resource/1683724712000/headset_icon_chatbot_citroen') !important;
-}
+  .embeddedServiceHelpButton .uiButton {
+    height: 80px !important;
+    min-width: 80px !important;
+    width: 80px;
+    border-radius: 50% !important;
+    bottom: 40px !important;
+    right: 70px !important;
+    background-image: url(https://psa-customerfirst--c.visualforce.com/resource/1683724712000/headset_icon_chatbot_citroen) !important;
+    border: 5px solid var(--lwc-colorBackgroundButtonBrand, rgb(235, 100, 40));
+    background-repeat: no-repeat !important;
+    background-size: 70px 70px !important;
+  }
 
-/*.embeddedServiceLiveAgentStateChatAvatar.isLightningOutContext .agentIconColor0{
-background : var(--lwc-colorBackgroundButtonBrand,rgb(235, 100, 40)) !important;
-}
-
-.plaintextContent.chasitor.embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI{
-background: var(--lwc-colorBackgroundButtonBrand,rgb(235, 100, 40)) !important;
-}
-
-button.endChatButton.closeChatButton.uiButton--default.uiButton.embeddedServiceSidebarButton{
-background : var(--lwc-colorBackgroundButtonBrand,rgb(235, 100, 40)) !important;
-}
-
-button.dialogButton.dialog-button-0.uiButton.embeddedServiceSidebarButton{
-background: var(--lwc-colorBackgroundButtonBrand,rgbrgb(247, 255, 20)) !important;;
-}
-
-.embeddedServiceSidebarButton.uiButton--inverse .label {
-color: var(--lwc-colorBackgroundButtonBrand,rgb(235, 100, 40)) !important;
-}*/
 </style>
 <script type='text/javascript'>
 var initESW = function(gslbBaseURL) {
@@ -105,7 +95,6 @@ if (isMobileDevice) {} else {
 	'border-radius: 50% !important;'+
 	'bottom: 40px !important;'+
 	'right: 70px !important;'+
-	'background-image: url(https://psa-customerfirst--c.visualforce.com/resource/1683724712000/headset_icon_chatbot_citroen) !important;'+
 	'border: 5px solid var(--lwc-colorBackgroundButtonBrand, rgb(235, 100, 40));'+
 	'background-repeat: no-repeat !important;'+
 	'background-size: 70px 70px !important;}';
