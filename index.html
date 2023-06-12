@@ -78,7 +78,17 @@ var isMobileDevice = regexp.test(details);
 if (isMobileDevice) {} else {
     console.log('inside desktop');
     var style = document.createElement('style');
-
+    style.innerHTML = 
+	'.embeddedServiceHelpButton .uiButton {' +
+	'height: 80px !important;'+
+	'min-width: 80px !important;'+
+	'width: 80px;'+
+	'border-radius: 50% !important;'+
+	'bottom: 40px !important;'+
+	'right: 70px !important;'+
+	'border: 5px solid var(--lwc-colorBackgroundButtonBrand, rgb(235, 100, 40));'+
+	'background-repeat: no-repeat !important;'+
+	'background-size: 70px 70px !important;}';
     style.innerHTML += 'li#esw-cta_3mi7Y0000000014{pointer-events : none;opacity :0.4;}';
     style.innerHTML += '.embedded-service .channelmenu_ctas > li:last-child{pointer-events : none;opacity :0.4;}';
     document.body.appendChild(style);
