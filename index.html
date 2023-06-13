@@ -11,7 +11,22 @@ width : 100% !important;
 button#esw-fab{
 height:80px !important;
 width:80px !important;
+background-color: transparent !important;
 }
+button#esw-fab[aria-expanded="true"]{
+height: 56px !important;
+width: 56px !important;
+bottom: 16px;
+}
+.embedded-service #esw-fab.showAnimation{
+animation:channelmenu-rotate-in-2-br-cw 0.5s ease-in both,channelmenu-shadow-pulse 2s infinite;
+}
+.embedded-service .fab div[class="icon_fab_container"] {
+width: 68px;
+height: 68px;
+background-size: 70px 70px;
+}
+
 </style>
 <script type='text/javascript'>
 var initESW = function(gslbBaseURL) {
