@@ -38,7 +38,7 @@ var initESW = function(gslbBaseURL) {
 			'https://d.la3-c1cs-fra.salesforceliveagent.com/chat',
 			gslbBaseURL,
 			'00D5t0000004fHO',
-			'NL_OP_ROCKS_e_PCDO'
+			'NL_OPEL_PCDO'
 		);
 };
 
@@ -60,7 +60,7 @@ if (isMobileDevice) {} else {
 
 if (!window.embedded_svc || !window.embedded_svc.menu) {
     var s = document.createElement('script');
-	s.setAttribute('src', 'https://psa-customerfirst--preprod.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
+		s.setAttribute('src', 'https://psa-customerfirst--preprod.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
     s.onload = function() {
         initESW(null);
     };
