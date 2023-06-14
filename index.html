@@ -11,7 +11,7 @@ width : 100% !important;
 button#esw-fab{
 height:80px !important;
 width:80px !important;
-
+background-color: transparent !important;
 }
 button#esw-fab[aria-expanded="true"]{
 height: 56px !important;
@@ -34,12 +34,13 @@ var initESW = function(gslbBaseURL) {
     embedded_svc.menu.settings.language = 'nl_NL'; //For example, enter 'en' or 'en-US'
 
 		embedded_svc.menu.init(
-			'https://psa-customerfirst--preprod.sandbox.my.salesforce.com',
-			'https://d.la3-c1cs-fra.salesforceliveagent.com/chat',
+			'https://psa-customerfirst.my.salesforce.com',
+			'https://d.la3-c1-cdg.salesforceliveagent.com/chat',
 			gslbBaseURL,
-			'00D5t0000004fHO',
+			'00D0O000000YvX4',
 			'NL_OPEL_PCDO'
 		);
+
 };
 
 var details = navigator.userAgent;
@@ -60,7 +61,7 @@ if (isMobileDevice) {} else {
 
 if (!window.embedded_svc || !window.embedded_svc.menu) {
     var s = document.createElement('script');
-		s.setAttribute('src', 'https://psa-customerfirst--preprod.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
+		s.setAttribute('src', 'https://psa-customerfirst.my.salesforce.com/embeddedservice/menu/fab.min.js');
     s.onload = function() {
         initESW(null);
     };
