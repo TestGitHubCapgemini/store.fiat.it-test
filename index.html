@@ -2,128 +2,77 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Venta de Coches</title>
+  <title>Tech News</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    /* Estilos adicionales personalizados */
+    /* Estilos personalizados */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      padding-top: 50px;
     }
     
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
+    .container {
+      max-width: 1200px;
     }
     
-    h1 {
-      margin: 0;
-    }
-    
-    main {
-      padding: 20px;
-      margin-top: 70px;
-    }
-    
-    .section-heading {
+    .article {
       margin-bottom: 30px;
     }
     
-    .car-card {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-    }
-    
-    .car-card h3 {
-      margin-top: 0;
-    }
-    
-    .car-card img {
-      max-width: 100%;
+    .article h2 {
       margin-bottom: 10px;
     }
     
-    .car-card p {
-      margin-top: 0;
-    }
-    
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+    .article p {
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Venta de Coches</h1>
-  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Tech News</a>
+  </nav>
   
-  <main>
-    <section id="banner" class="mb-5">
-      <div class="container">
-        <h2 class="section-heading">Encuentra el coche perfecto para ti</h2>
-        <p>Bienvenido a nuestra página de venta de coches, donde podrás encontrar una amplia selección de coches nuevos y usados.</p>
-        <a href="#cars" class="btn btn-primary">Ver coches disponibles</a>
-      </div>
-    </section>
-    
-    <section id="cars" class="mb-5">
-      <div class="container">
-        <h2 class="section-heading">Coches disponibles</h2>
-        
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="car-card">
-              <h3>Coche 1</h3>
-              <img src="ruta_de_la_imagen_del_coche_1.jpg" alt="Coche 1">
-              <p>Descripción del coche 1.</p>
-              <p>Precio: $XX,XXX</p>
-              <a href="#">Más información</a>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="car-card">
-              <h3>Coche 2</h3>
-              <img src="ruta_de_la_imagen_del_coche_2.jpg" alt="Coche 2">
-              <p>Descripción del coche 2.</p>
-              <p>Precio: $XX,XXX</p>
-              <a href="#">Más información</a>
-            </div>
-          </div>
-          
-          <!-- Agrega más coches utilizando el mismo formato de col-lg-4 col-md-6 mb-4 -->
-          
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="article">
+          <h2>El nuevo smartphone XYZ llega al mercado</h2>
+          <img src="ruta_de_la_imagen_1.jpg" alt="Imagen 1" class="img-fluid">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut orci congue, vestibulum mauris ut, bibendum sem. Donec rhoncus lacinia nisi et ullamcorper. Vestibulum eget velit rhoncus, auctor elit ac, euismod ligula.</p>
         </div>
-      </div>
-    </section>
-    
-    <section id="contact" class="mb-5">
-      <div class="container">
-        <h2 class="section-heading">Contáctanos</h2>
-        <p>Si tienes alguna pregunta o estás interesado en alguno de nuestros coches, no dudes en contactarnos.</p>
-        <p>Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible.</p>
         
-        <!-- Agrega aquí el formulario de contacto -->
+        <!-- Agrega más artículos utilizando el mismo formato de div.article -->
         
       </div>
-    </section>
-  </main>
-  
-  <footer>
-    <div class="container">
-      <p>Derechos de autor &copy; 2023 Venta de Coches. Todos los derechos reservados.</p>
+      
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Noticias recientes</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Nueva actualización de software disponible</a></li>
+              <li><a href="#">Los avances en inteligencia artificial</a></li>
+              <li><a href="#">El futuro de la realidad virtual</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Artículos populares</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Las mejores laptops para trabajo</a></li>
+              <li><a href="#">Consejos para proteger tu privacidad en línea</a></li>
+              <li><a href="#">Los mejores smartphones del año</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Agrega más secciones de contenido adicional -->
+        
+      </div>
     </div>
-  </footer>
+  </div>
   
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
