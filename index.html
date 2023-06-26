@@ -48,6 +48,7 @@
   </style>
 </head>
 <body>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Tech News</a>
   </nav>
@@ -215,7 +216,93 @@
       </div>
     </div>
   </div>
-  
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type='text/javascript' src='https://service.force.com/embeddedservice/menu/fab.min.js'></script>
+<style>
+.embedded-service .fab div[class="icon_fab_container"] > img.esw-custom_icon{
+width : 100% !important;
+}
+button#esw-fab{
+height:80px !important;
+width:80px !important;
+background-color: transparent;
+}
+button#esw-fab[aria-expanded="true"]{
+height: 56px !important;
+width: 56px !important;
+bottom: 16px !important;
+}
+
+.embedded-service .fab div[class="icon_fab_container"] {
+width: 68px !important;
+height: 68px !important;
+background-size: 70px 70px !important;
+}
+
+.embedded-service .fab:hover:before, .embedded-service .fab:focus:before {
+
+    background-color: transparent;
+    opacity: 0;
+
+}
+
+.embedded-service .fab {
+
+    box-shadow: 0px 0px 0px 0 rgba(45,45,45,0.5);
+
+}
+  
+.embedded-service #esw-fab.showAnimation {
+    transform: translate3d(0,0,0);
+    -webkit-animation: channelmenu-rotate-in-0-br-cw 0.0s ease-in both,channelmenu-shadow-pulse 0s 0s 0;
+    animation: channelmenu-rotate-in-0-br-cw 0.0s ease-in both,channelmenu-shadow-pulse 0s 0s 0;
+}
+  
+.embedded-service .fab:focus {
+    box-shadow: 0 0 0px 0px transparent; 
+}
+  
+</style>
+<script type='text/javascript'>
+var initESW = function(gslbBaseURL) {
+    // Required if you want labels in a language that’s different from your user’s context.
+    embedded_svc.menu.settings.language = 'it'; //For example, enter 'en' or 'en-US'
+	
+		embedded_svc.menu.init(
+			'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com',
+			'https://d.la3-c1cs-fra.salesforceliveagent.com/chat',
+			gslbBaseURL,
+			'00D0D0000000P9N',
+			'IT_Citroen_PCDO'
+		);
+};
+
+var details = navigator.userAgent;
+// Creating a regular expression containing some mobile devices keywords to search it in details string
+var regexp = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i;
+
+// Using test() method to search regexp in details
+var isMobileDevice = regexp.test(details);
+if (isMobileDevice) {} else {
+    console.log('inside desktop');
+    var style = document.createElement('style');
+
+    style.innerHTML += 'li#esw-cta_3mi7Y0000000014{pointer-events : none;opacity :0.4;}';
+    style.innerHTML += '.embedded-service .channelmenu_ctas > li:last-child{pointer-events : none;opacity :0.4;}';
+    document.body.appendChild(style);
+}
+
+if (!window.embedded_svc || !window.embedded_svc.menu) {
+    var s = document.createElement('script');
+    s.setAttribute('src', 'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
+    s.onload = function() {
+        initESW(null);
+    };
+    document.body.appendChild(s);
+} else {
+    initESW('https://service.force.com');
+}
+</script>
 </body>
 </html>
