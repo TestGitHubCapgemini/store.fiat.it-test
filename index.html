@@ -287,20 +287,14 @@ label.slds-form-element__label.slds-no-flex {
 <script type='text/javascript'>
 var initESW = function(gslbBaseURL) {
     // Required if you want labels in a language that’s different from your user’s context.
-    embedded_svc.init(
-			'https://psa-customerfirst--hotfix1.sandbox.my.salesforce.com',
-			'https://psa-customerfirst--hotfix1.sandbox.my.site.com/PSADealer',
+    embedded_svc.menu.settings.language = 'it'; //For example, enter 'en' or 'en-US'
+	
+		embedded_svc.menu.init(
+			'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com',
+			'https://d.la1-c1cs-cdg.salesforceliveagent.com/chat',
 			gslbBaseURL,
-			'00D9E000000A6K7',
-			'IT_Fiat_JAFAL',
-			{
-				baseLiveAgentContentURL: 'https://c.la2-c1cs-fra.salesforceliveagent.com/content',
-				deploymentId: '5729E0000004DIb',
-				buttonId: '5739E0000004I4v',
-				baseLiveAgentURL: 'https://d.la2-c1cs-fra.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I0C000000CabsUAC_1882a177f62',
-				isOfflineSupportEnabled: false
-			}
+			'00D0D0000000P9N',
+			'IT_Fiat_JAFAL'
 		);
 };
 
@@ -321,7 +315,7 @@ if (isMobileDevice) {} else {
 
 if (!window.embedded_svc || !window.embedded_svc.menu) {
     var s = document.createElement('script');
-    s.setAttribute('src', 'https://psa-customerfirst--hotfix1.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+    s.setAttribute('src', 'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
     s.onload = function() {
         initESW(null);
     };
