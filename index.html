@@ -332,20 +332,28 @@
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		// Required if you want labels in a language that’s different from your user’s context.
-		embedded_svc.menu.settings.language = 'de'; //For example, enter 'en' or 'en-US'
+		embedded_svc.menu.settings.language = 'en'; //For example, enter 'en' or 'en-US'
 
-		embedded_svc.menu.init(
-			'https://psa-customerfirst--valid3.sandbox.my.salesforce.com',
-			'https://d.la3-c1cs-fra.salesforceliveagent.com/chat',
+		embedded_svc.init(
+			'https://psa-customerfirst.my.salesforce.com',
+			'https://peugeot.my-customerportal.com/peugeot',
 			gslbBaseURL,
-			'00D5t0000004fcD',
-			'DE_OP_PCDO'
+			'00D0O000000YvX4',
+			'VRA_AP',
+			{
+				baseLiveAgentContentURL: 'https://c.la3-c1-fra.salesforceliveagent.com/content',
+				deploymentId: '57269000000sXvw',
+				buttonId: '57369000000sXz5',
+				baseLiveAgentURL: 'https://d.la3-c1-fra.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I69000000sXxVEAU_188b864fdff',
+				isOfflineSupportEnabled: false
+			}
 		);
 	};
 
 	if (!window.embedded_svc || !window.embedded_svc.menu) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://psa-customerfirst--valid3.sandbox.my.salesforce.com/embeddedservice/menu/fab.min.js');
+		s.setAttribute('src', 'https://psa-customerfirst.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
